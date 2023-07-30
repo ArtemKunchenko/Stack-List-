@@ -23,4 +23,22 @@ void List<T>::pushBack(T data)
 		temp->_next= new Node<T>(data);
 		
 	}
+	_size++;
 }
+
+template<class T>
+int List<T>::getSize() { return _size; }
+
+template<class T>
+T& List<T>::operator[](const int index)
+{
+	int counter = 0;
+	Node<T>* temp = _head;
+	while (temp != nullptr)
+	{
+		if (counter == index) return temp->_data;
+		temp = temp->_next;
+		counter++;
+	}
+}
+

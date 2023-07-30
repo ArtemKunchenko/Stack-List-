@@ -8,6 +8,12 @@ int main()
 	List<int> ex;
 	ex.pushBack(1);
 	ex.pushBack(2);
+	ex.pushBack(4);
+	for (int i = 0; i < ex.getSize(); i++)
+	{
+		cout << ex[i] << "  ";
+	}
+	cout << endl;
 	system("pause");
 	return 0;
 }

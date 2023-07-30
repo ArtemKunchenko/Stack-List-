@@ -8,7 +8,9 @@ class List
 public:
 	List();//constructor default
 	~List();//distructor
-	void pushBack(T data);//adds an element to the end of the list
+	void pushBack(T data);//adds an element to the end of the List
+	int getSize();//returns a size of list
+	T& operator[](const int index);//overloads operator []
 
 private:
 #pragma region CLASS NODE
