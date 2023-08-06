@@ -10,6 +10,7 @@ inline List<T>::List()
 template<class T>
 List<T>::~List()
 {
+	clear();
 }
 
 template<class T>
@@ -27,12 +28,33 @@ void List<T>::pushBack(T data)
 }
 
 template<class T>
+void List<T>::pushFront(T data)
+{
+	_head = new Node<T>(data, _head);
+	_size++;
+}
+
+template<class T>
 void List<T>::popFront()
 {
 	Node <T> *temp = _head;
 	_head = _head->_next;
 	delete temp;
 	_size--;
+}
+
+template<class T>
+void List<T>::insert(T data, int index)
+{
+	if (index == 0) pushFront(data);
+	else
+	{
+		Node<T>* previous = this->_head;
+		for (int i = 0; i < index-1; i++) previous = previous->_next;
+		Node <T>* new_node = new Node<T>(data, previous->_next);
+		previous->_next = new_node;
+		_size++;
+	}
 }
 
 template<class T>

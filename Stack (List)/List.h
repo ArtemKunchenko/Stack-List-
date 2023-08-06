@@ -9,7 +9,9 @@ public:
 	List();//constructor default
 	~List();//distructor
 	void pushBack(T data);//adds an element to the end of the List
+	void pushFront(T data);//adds an element to the begining of the List
 	void popFront();//deletes the first element in a List
+	void insert(T data, int index);//iserts am element int the particular place
 	void clear();///deletes all elements in a List
 	int getSize();//returns a size of list
 	T& operator[](const int index);//overloads operator []
