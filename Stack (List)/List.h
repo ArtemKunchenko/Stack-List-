@@ -16,6 +16,7 @@ public:
 	void removeAt(int index);//deletes an element from the particular place
 	void clear();///deletes all elements in a List
 	int getSize();//returns a size of list
+	T& getData(int index);//returns element of index
 	T& operator[](const int index);//overloads operator []
 
 private:

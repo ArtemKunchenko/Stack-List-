@@ -1,26 +1,25 @@
 #include<iostream>
 #include "List.h"
 #include "List.cpp"
+#include "Stack.h"
+#include "Stack.cpp"
 using namespace std;
 
 int main()
 {
-	List<int> ex;
-	ex.pushBack(1);
-	ex.pushBack(2);
-	ex.pushBack(4);
-	ex.pushBack(8);
-	for (int i = 0; i < ex.getSize(); i++)
-	{
-		cout << ex[i] << "  ";
-	}
-	cout <<"The are "<<ex.getSize()<<" elements" << endl;
-	ex.popBack();
-	for (int i = 0; i < ex.getSize(); i++)
-	{
-		cout << ex[i] << "  ";
-	}
-	cout << "The are " << ex.getSize() << " elements" << endl;
+	Stack<int> ex(4);
+	cout<<"Is empty: " << ex.empty() << endl;
+	ex.push(1);
+	ex.push(2);
+	ex.push(4);
+	ex.push(8);
+	ex.print();
+	ex.push(16);
+	ex.print();
+	ex.pop();
+	ex.print();
+	cout << "Is empty: " << ex.empty() << endl;
+	cout << "Top element: " << ex.top() << endl;
 	system("pause");
 	return 0;
 }
