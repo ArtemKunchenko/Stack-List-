@@ -9,12 +9,13 @@ int main()
 	ex.pushBack(1);
 	ex.pushBack(2);
 	ex.pushBack(4);
+	ex.pushBack(8);
 	for (int i = 0; i < ex.getSize(); i++)
 	{
 		cout << ex[i] << "  ";
 	}
 	cout <<"The are "<<ex.getSize()<<" elements" << endl;
-	ex.insert(9, 2);
+	ex.popBack();
 	for (int i = 0; i < ex.getSize(); i++)
 	{
 		cout << ex[i] << "  ";

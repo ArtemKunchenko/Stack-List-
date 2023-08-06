@@ -10,8 +10,10 @@ public:
 	~List();//distructor
 	void pushBack(T data);//adds an element to the end of the List
 	void pushFront(T data);//adds an element to the begining of the List
-	void popFront();//deletes the first element in a List
-	void insert(T data, int index);//iserts am element int the particular place
+	void popFront();//deletes the first element from a List
+	void popBack();//deletes the last element from a List
+	void insert(T data, int index);//iserts an element in the particular place
+	void removeAt(int index);//deletes an element from the particular place
 	void clear();///deletes all elements in a List
 	int getSize();//returns a size of list
 	T& operator[](const int index);//overloads operator []

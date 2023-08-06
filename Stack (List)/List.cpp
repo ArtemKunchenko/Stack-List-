@@ -44,6 +44,12 @@ void List<T>::popFront()
 }
 
 template<class T>
+void List<T>::popBack()
+{
+	removeAt(_size - 1);
+}
+
+template<class T>
 void List<T>::insert(T data, int index)
 {
 	if (index == 0) pushFront(data);
@@ -54,6 +60,21 @@ void List<T>::insert(T data, int index)
 		Node <T>* new_node = new Node<T>(data, previous->_next);
 		previous->_next = new_node;
 		_size++;
+	}
+}
+
+template<class T>
+void List<T>::removeAt(int index)
+{
+	if (index == 0) popFront();
+	else
+	{
+		Node<T>* previous = this->_head;
+		for (int i = 0; i < index - 1; i++) previous = previous->_next;
+		Node <T>* for_delete = previous->_next;
+		previous->_next = for_delete->_next;
+		delete for_delete;
+		_size--;
 	}
 }
 
