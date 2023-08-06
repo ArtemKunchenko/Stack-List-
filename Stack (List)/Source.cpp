@@ -14,7 +14,7 @@ int main()
 		cout << ex[i] << "  ";
 	}
 	cout <<"The are "<<ex.getSize()<<" elements" << endl;
-	ex.popFront();
+	ex.clear();
 	for (int i = 0; i < ex.getSize(); i++)
 	{
 		cout << ex[i] << "  ";

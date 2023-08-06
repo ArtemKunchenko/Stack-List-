@@ -36,6 +36,12 @@ void List<T>::popFront()
 }
 
 template<class T>
+void List<T>::clear()
+{
+	while (_size != 0) popFront();
+}
+
+template<class T>
 int List<T>::getSize() { return _size; }
 
 template<class T>
