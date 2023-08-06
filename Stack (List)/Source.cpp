@@ -13,7 +13,13 @@ int main()
 	{
 		cout << ex[i] << "  ";
 	}
-	cout << endl;
+	cout <<"The are "<<ex.getSize()<<" elements" << endl;
+	ex.popFront();
+	for (int i = 0; i < ex.getSize(); i++)
+	{
+		cout << ex[i] << "  ";
+	}
+	cout << "The are " << ex.getSize() << " elements" << endl;
 	system("pause");
 	return 0;
 }

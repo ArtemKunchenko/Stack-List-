@@ -27,6 +27,15 @@ void List<T>::pushBack(T data)
 }
 
 template<class T>
+void List<T>::popFront()
+{
+	Node <T> *temp = _head;
+	_head = _head->_next;
+	delete temp;
+	_size--;
+}
+
+template<class T>
 int List<T>::getSize() { return _size; }
 
 template<class T>
